@@ -1,11 +1,5 @@
-# This is a sample Python script.
+# This is converter TWindow to TGraphicsComposite for files IEC HMI SCADA Sonata.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-#def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    #print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 import easygui
 #import io
 from pathlib import *
@@ -22,6 +16,7 @@ if __name__ == '__main__':
         lnk=open_file()
         if lnk != None:
             current_dir = PureWindowsPath(lnk)
+            file_name = current_dir.name
             bak = str(current_dir.parents[0]) + "\\tmp.bak"
             f = open(lnk, "r")
             t = open(bak, "w")
